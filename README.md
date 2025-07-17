@@ -64,10 +64,10 @@ CREATE USER IF NOT EXISTS 'pma'@'localhost' IDENTIFIED BY 'pmapass';
 GRANT SELECT, INSERT, UPDATE, DELETE ON `phpmyadmin`.* TO 'pma'@'localhost';
 ```
 
-**Acción:** Ejecuta este script desde la raíz de tu proyecto para crear todo lo necesario en MariaDB.
+**Acción:** El script `phpmyadmin_config.sql` se encuentra en la raíz de este repositorio. Navega con tu terminal a la carpeta donde has clonado este repositorio y ejecuta el siguiente comando para crear todo lo necesario en MariaDB.
 
 ```bash
-mariadb -u root -p < backend/database/phpmyadmin_config.sql
+mariadb -u root -p < phpmyadmin_config.sql
 ```
 Te pedirá la contraseña de `root` de tu base de datos. Si la base de datos `phpmyadmin` ya existe, no te preocupes, el script está diseñado para no fallar.
 
